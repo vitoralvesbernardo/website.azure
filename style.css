@@ -1,54 +1,55 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
+<main class="container">
+  <div class="movie oppenheimer">
+    <div class="movie-info">
+      <h3><a href="#">Oppenheimer</a></h3>
+      <p>Direção de Christopher Nolan. Drama histórico sobre o criador da bomba atômica.</p>
+    </div>
+  </div>
 
-/* Estilo geral */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    color: #333;
-    line-height: 1.6;
-}
+  <div class="movie barbie">
+    <div class="movie-info">
+      <h3><a href="#">Barbie</a></h3>
+      <p>Uma aventura colorida com Margot Robbie e Ryan Gosling no mundo da Barbie.</p>
+    </div>
+  </div>
 
-/* Cabeçalho */
-header {
-    background-color: #1c1c1c;
-    color: white;
-    text-align: center;
-    padding: 20px 0;
-}
+  <div class="movie avatar">
+    <div class="movie-info">
+      <h3><a href="#">Avatar: O Caminho da Água</a></h3>
+      <p>A sequência épica do universo de Pandora, dirigido por James Cameron.</p>
+    </div>
+  </div>
 
-.search-bar {
-    margin-top: 10px;
-}
+  <div class="movie spiderman">
+    <div class="movie-info">
+      <h3><a href="#">Homem-Aranha: Sem Volta Para Casa</a></h3>
+      <p>Peter Parker enfrenta o multiverso ao lado de aliados inesperados.</p>
+    </div>
+  </div>
 
-.search-bar input {
-    width: 60%;
-    padding: 10px;
-    font-size: 16px;
-    border-radius: 5px;
-    border: 1px solid #ccc;
-    margin-top: 10px;
-}
-
-/* Container principal */
-.container {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    padding: 20px;
-}
-
-/* Card de filme */
+  <div class="movie dune">
+    <div class="movie-info">
+      <h3><a href="#">Duna: Parte 2</a></h3>
+      <p>Paul Atreides continua sua jornada em um mundo árido e perigoso.</p>
+    </div>
+  </div>
+</main>
+🎨 CSS (com fundo das imagens no card .movie):
+css
+Copiar
+Editar
 .movie {
     width: 220px;
+    height: 350px;
     margin: 15px;
-    background-color: #fff;
     border-radius: 10px;
-    overflow: hidden;
+    background-size: cover;
+    background-position: center;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: flex-end;
     transition: transform 0.2s ease-in-out;
 }
 
@@ -56,25 +57,26 @@ header {
     transform: scale(1.03);
 }
 
-.movie img {
+/* Overlay para leitura do texto */
+.movie::before {
+    content: "";
+    position: absolute;
+    bottom: 0;
     width: 100%;
-    height: 300px;
-    object-fit: cover;
-    display: block;
+    height: 60%;
+    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
 }
 
-/* Informações do filme */
+/* Info do filme */
 .movie-info {
+    position: relative;
     padding: 15px;
-}
-
-.movie-info h3 {
-    font-size: 18px;
-    margin-bottom: 8px;
+    color: white;
+    z-index: 1;
 }
 
 .movie-info h3 a {
-    color: #333;
+    color: #fff;
     text-decoration: none;
 }
 
@@ -84,14 +86,26 @@ header {
 
 .movie-info p {
     font-size: 14px;
-    color: #555;
+    color: #ddd;
 }
 
-/* Rodapé */
-footer {
-    background-color: #1c1c1c;
-    color: white;
-    text-align: center;
-    padding: 10px;
-    margin-top: 30px;
+/* 🎬 Imagens de fundo específicas pra cada filme */
+.oppenheimer {
+    background-image: url('https://m.media-amazon.com/images/I/81NiN3rM1zL._AC_SL1500_.jpg');
+}
+
+.barbie {
+    background-image: url('https://m.media-amazon.com/images/I/91JzQfV-kqL._AC_SL1500_.jpg');
+}
+
+.avatar {
+    background-image: url('https://m.media-amazon.com/images/I/71U3sF2AZDL._AC_SL1181_.jpg');
+}
+
+.spiderman {
+    background-image: url('https://m.media-amazon.com/images/I/91e9G3vI-XL._AC_SL1500_.jpg');
+}
+
+.dune {
+    background-image: url('https://m.media-amazon.com/images/I/71Oxh5xjcRL._AC_SL1200_.jpg');
 }
