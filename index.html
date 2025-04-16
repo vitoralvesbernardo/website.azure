@@ -1,111 +1,62 @@
-<main class="container">
-  <div class="movie oppenheimer">
-    <div class="movie-info">
-      <h3><a href="#">Oppenheimer</a></h3>
-      <p>Direção de Christopher Nolan. Drama histórico sobre o criador da bomba atômica.</p>
-    </div>
-  </div>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Catálogo de Filmes</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Catálogo de Filmes</h1>
+        <div class="search-bar">
+            <input type="text" placeholder="Pesquisar filmes...">
+        </div>
+    </header>
 
-  <div class="movie barbie">
-    <div class="movie-info">
-      <h3><a href="#">Barbie</a></h3>
-      <p>Uma aventura colorida com Margot Robbie e Ryan Gosling no mundo da Barbie.</p>
-    </div>
-  </div>
+    <main class="container">
+        <div class="movie">
+            <img src="https://m.media-amazon.com/images/I/81NiN3rM1zL._AC_SL1500_.jpg" alt="Oppenheimer">
+            <div class="movie-info">
+                <h3><a href="#">Oppenheimer</a></h3>
+                <p>Direção de Christopher Nolan. Drama histórico sobre o criador da bomba atômica.</p>
+            </div>
+        </div>
 
-  <div class="movie avatar">
-    <div class="movie-info">
-      <h3><a href="#">Avatar: O Caminho da Água</a></h3>
-      <p>A sequência épica do universo de Pandora, dirigido por James Cameron.</p>
-    </div>
-  </div>
+        <div class="movie">
+            <img src="https://m.media-amazon.com/images/I/91JzQfV-kqL._AC_SL1500_.jpg" alt="Barbie">
+            <div class="movie-info">
+                <h3><a href="#">Barbie</a></h3>
+                <p>Uma aventura colorida com Margot Robbie e Ryan Gosling no mundo da Barbie.</p>
+            </div>
+        </div>
 
-  <div class="movie spiderman">
-    <div class="movie-info">
-      <h3><a href="#">Homem-Aranha: Sem Volta Para Casa</a></h3>
-      <p>Peter Parker enfrenta o multiverso ao lado de aliados inesperados.</p>
-    </div>
-  </div>
+        <div class="movie">
+            <img src="https://m.media-amazon.com/images/I/71U3sF2AZDL._AC_SL1181_.jpg" alt="Avatar 2">
+            <div class="movie-info">
+                <h3><a href="#">Avatar: O Caminho da Água</a></h3>
+                <p>A sequência épica do universo de Pandora, dirigido por James Cameron.</p>
+            </div>
+        </div>
 
-  <div class="movie dune">
-    <div class="movie-info">
-      <h3><a href="#">Duna: Parte 2</a></h3>
-      <p>Paul Atreides continua sua jornada em um mundo árido e perigoso.</p>
-    </div>
-  </div>
-</main>
-🎨 CSS (com fundo das imagens no card .movie):
-css
-Copiar
-Editar
-.movie {
-    width: 220px;
-    height: 350px;
-    margin: 15px;
-    border-radius: 10px;
-    background-size: cover;
-    background-position: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    align-items: flex-end;
-    transition: transform 0.2s ease-in-out;
-}
+        <div class="movie">
+            <img src="https://m.media-amazon.com/images/I/91e9G3vI-XL._AC_SL1500_.jpg" alt="Homem-Aranha">
+            <div class="movie-info">
+                <h3><a href="#">Homem-Aranha: Sem Volta Para Casa</a></h3>
+                <p>Peter Parker enfrenta o multiverso ao lado de aliados inesperados.</p>
+            </div>
+        </div>
 
-.movie:hover {
-    transform: scale(1.03);
-}
+        <div class="movie">
+            <img src="https://m.media-amazon.com/images/I/71Oxh5xjcRL._AC_SL1200_.jpg" alt="Duna">
+            <div class="movie-info">
+                <h3><a href="#">Duna: Parte 2</a></h3>
+                <p>Paul Atreides continua sua jornada em um mundo árido e perigoso.</p>
+            </div>
+        </div>
+    </main>
 
-/* Overlay para leitura do texto */
-.movie::before {
-    content: "";
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 60%;
-    background: linear-gradient(to top, rgba(0,0,0,0.8), rgba(0,0,0,0));
-}
-
-/* Info do filme */
-.movie-info {
-    position: relative;
-    padding: 15px;
-    color: white;
-    z-index: 1;
-}
-
-.movie-info h3 a {
-    color: #fff;
-    text-decoration: none;
-}
-
-.movie-info h3 a:hover {
-    text-decoration: underline;
-}
-
-.movie-info p {
-    font-size: 14px;
-    color: #ddd;
-}
-
-/* 🎬 Imagens de fundo específicas pra cada filme */
-.oppenheimer {
-    background-image: url('https://m.media-amazon.com/images/I/81NiN3rM1zL._AC_SL1500_.jpg');
-}
-
-.barbie {
-    background-image: url('https://m.media-amazon.com/images/I/91JzQfV-kqL._AC_SL1500_.jpg');
-}
-
-.avatar {
-    background-image: url('https://m.media-amazon.com/images/I/71U3sF2AZDL._AC_SL1181_.jpg');
-}
-
-.spiderman {
-    background-image: url('https://m.media-amazon.com/images/I/91e9G3vI-XL._AC_SL1500_.jpg');
-}
-
-.dune {
-    background-image: url('https://m.media-amazon.com/images/I/71Oxh5xjcRL._AC_SL1200_.jpg');
-}
+    <footer>
+        <p>&copy; 2025 Catálogo de Filmes</p>
+    </footer>
+</body>
+</html>
